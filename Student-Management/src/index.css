@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7f0;
+  color: #344b3b;
+}
+
+.navbar {
+  height: 75px;
+  background: #dcebdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+}
+
+.navbar h2 {
+  color: #466b50;
+}
+
+.navbar span {
+  color: #718773;
+}
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 75px);
+}
+
+.sidebar {
+  width: 220px;
+  background: #edf3e8;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #49664e;
+  padding: 14px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #c8dfc5;
+  color: #294832;
+}
+
+.content {
+  flex: 1;
+  padding: 35px;
+}
+
+.content h1 {
+  margin-bottom: 12px;
+}
+
+.content p {
+  margin-bottom: 25px;
+  color: #718773;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: #e2eddf;
+  padding: 25px;
+  border-radius: 16px;
+  min-width: 200px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(70, 107, 80, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  color: #466b50;
+}
+
+.student-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #cbd9c6;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+}
+
+input:focus {
+  border-color: #789b79;
+}
+
+button {
+  padding: 12px 18px;
+  background: #789b79;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #55795b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #edf1e9;
+}
+
+th {
+  background: #dcebdc;
+}
+
+.delete-btn {
+  background: #d98c86;
+}
+
+.delete-btn:hover {
+  background: #bd6c66;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .student-form {
+    flex-direction: column;
+  }
+
+  .student-form input,
+  .student-form button {
+    width: 100%;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  .content {
+    overflow-x: auto;
+  }
+}
